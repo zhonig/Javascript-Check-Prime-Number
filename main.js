@@ -1,20 +1,9 @@
-function isPrime(num) {
-	
-	if(num <= 1) return false;
-	
-    for (let count = 2; count <= Math.floor(Math.sqrt(num)); count++) {
-		
-        if (num % count == 0) {
-			
-            return false;
-			
-        }
-		
-    }
-	
-    return true;
-	
-}
+const isPrime = num => {
+    for(let i = 2; i < num; i++)
+      if(num % i === 0) return false;
+    return num > 1;
+  }
+
 
 console.log("1:", isPrime(1)); //false
 console.log("2:", isPrime(2)); //true
